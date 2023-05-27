@@ -21,7 +21,7 @@ if args.source == '0':                      # program dla kamerki
     capture = cv2.VideoCapture(0)           # przechwycenie obrazu z kamerki
     while capture.isOpened():
         ret,image = capture.read()
-        if ret == True:                     # jesli jest dostrpna klatka można przetworzyc
+        if ret == True:                     # jesli jest dostepna klatke mozna przetworzyc
             
             if args.gpu:                                                    # wykorzystanie GPU do obliczen
                 results = model(image, device='0')
